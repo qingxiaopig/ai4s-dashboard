@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Store AI4S 看板 · pub-ai4s 分支增量</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">openJiuwen · ai4s</p>
+        <h1>Agent Store AI4S 看板</h1>
+        <p class="sub">
+          openJiuwen/agent-solution · <code>pub-ai4s</code> · HEAD <code>21afec910</code>
+          · merge-base <code>12735f553</code> · 统计于 2026-11-10 18:05 +08:00
+        </p>
+        <p class="scope-line">
+          <span class="tag">分支增量，不含 main 历史</span>
+          <span class="tag warn">合并提交只计提交数</span>
+          <span class="tag gray">0 个二进制文件</span>
+        </p>
+      </div>
+      <div class="actions">
+        <button id="btn-refresh" type="button">刷新</button>
+        <button id="btn-export" type="button" title="按当前口径导出提交 / 作者 / 目录 / skill 明细 CSV">导出资产清单</button>
+        <button class="primary" id="btn-sync" type="button" title="静态页面，无后端同步">立即同步</button>
+        <button id="btn-config" type="button" title="查看统计口径">配置</button>
+      </div>
+    </header>
+
+    <div id="banner"></div>
+
+    <section class="summary-strip" id="summary-strip" aria-label="核心指标"></section>
+
+    <nav class="tabs" id="main-tabs" aria-label="统计页签">
+      <button class="tab active" type="button" data-tab="overview">总览</button>
+      <button class="tab" type="button" data-tab="commits">提交统计</button>
+      <button class="tab" type="button" data-tab="authors">作者统计</button>
+      <button class="tab" type="button" data-tab="skills">skills统计</button>
+      <button class="tab" type="button" data-tab="dirs">目录统计</button>
+      <button class="tab" type="button" data-tab="code">代码量统计</button>
+    </nav>
+
+    <div class="tab-body" id="tab-body" aria-live="polite"></div>
+
+    <footer class="page-foot">
+      数据来源：AtomGit openJiuwen/agent-solution · <code>pub-ai4s</code> ·
+      merge-base <code>12735f553..HEAD</code> · 统计脚本
+      <code>analysis-agent/branch_scope_stats.py</code> ·
+      明细报告 <code>analysis-agent/branch_scope_report.md</code> ·
+      本页为静态离线快照，双击即可浏览。
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <h2 id="modal-title">统计口径</h2>
+        <button class="modal-close" id="modal-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
